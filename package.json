@@ -1,7 +1,7 @@
 {
   "name": "react-radix-tooltip",
-  "version": "1.0.3",
-  "description": "A streamlined, developer-friendly wrapper for [@radix-ui/react-tooltip](https://www.radix-ui.com). This component simplifies the Radix Tooltip implementation by allowing you to trigger tooltips using a single component and a simplified prop interface.",
+  "version": "1.1.2",
+  "description": "A developer-friendly wrapper for [@radix-ui/react-tooltip](https://www.radix-ui.com) that simplifies implementation into a single component with a streamlined prop interface. It also includes a feature to automatically switch from a tooltip to a popover on mobile or touch devices.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -22,7 +22,9 @@
   },
   "license": "ISC",
   "peerDependencies": {
+    "@radix-ui/react-popover": "^1.1.15",
     "@radix-ui/react-tooltip": "^1.2.8",
+    "react-device-detect": "^2.2.3",
     "react": ">=16.8.0",
     "react-dom": ">=16.8.0",
     "tailwindcss": ">=3.0.0"
@@ -32,6 +34,7 @@
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-terser": "^1.0.0",
     "@rollup/plugin-typescript": "^12.3.0",
+    "@tailwindcss/postcss": "^4.2.1",
     "@types/node": "^25.2.3",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
