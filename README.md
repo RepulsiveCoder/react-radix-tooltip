@@ -46,15 +46,26 @@ const MyComponent = () => (
 
 ## Props
 
+More Details on [Radix-UI Documentation](https://www.radix-ui.com/primitives/docs/components/tooltip)
+
 | Prop | Type | Default | Description |
 |---|---|---|---|
-| title | ReactNode | Required | The content to display inside the tooltip. |
-| children | ReactElement | Required | The element that triggers the tooltip. |
-| placement | top | bottom | left | right | top | Preferred position of the tooltip. |
-| sideOffset | number | 4 | Distance between the trigger and the tooltip. |
-| arrow | boolean | false | Whether to display the optional arrow component. |
-| delayDuration | number | 700 | Delay in ms before tooltip opens. |
-| tooltipClassName | string | - | CSS class for the tooltip content. |                    |
+| title | React.ReactNode | — | The content to be displayed inside the tooltip. |
+| children | React.ReactElement | — | The trigger element that activates the tooltip on hover/focus. |
+| container | HTMLDivElement | null | — | The container element into which the tooltip will be rendered. |
+| placement | 'top' \| 'bottom' \| 'left' \| 'right' | 'top' | The preferred side of the trigger to render the tooltip. |
+| sideOffset | number | 0 | The distance in pixels from the trigger element. |
+| arrow | boolean | false | Whether to render an arrow pointing to the trigger. |
+| arrowWidth | number | — | The width of the arrow in pixels. |
+| arrowHeight | number | — | The height of the arrow in pixels. |
+| arrowPadding | number | — | The padding between the arrow and the edges of the tooltip. |
+| delayDuration | number | 700 | The duration in milliseconds to wait before showing the tooltip. |
+| skipDelayDuration | number | 300 | The duration to wait before resetting the delay. |
+| defaultOpen | boolean | false | The open state of the tooltip when it is initially rendered. |
+| onOpenChange | (open: boolean) => void | — | Event handler called when the open state of the tooltip changes. |
+| style | React.CSSProperties | — | Custom inline styles for the tooltip content. |
+| tooltipClassName | string | — | CSS class for the tooltip content container. |
+| tooltipArrowClassName | string | — | CSS class for the tooltip arrow element. |
 
 ---
 
