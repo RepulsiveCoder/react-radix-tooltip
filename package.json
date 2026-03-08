@@ -1,6 +1,6 @@
 {
   "name": "react-radix-tooltip",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A streamlined, developer-friendly wrapper for [@radix-ui/react-tooltip](https://www.radix-ui.com). This component simplifies the Radix Tooltip implementation by allowing you to trigger tooltips using a single component and a simplified prop interface.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -24,7 +24,8 @@
   "peerDependencies": {
     "@radix-ui/react-tooltip": "^1.2.8",
     "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react-dom": ">=16.8.0",
+    "tailwindcss": ">=3.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^29.0.0",
@@ -34,10 +35,13 @@
     "@types/node": "^25.2.3",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
     "react": "^19.2.4",
     "rollup-plugin-dts": "^6.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "tailwindcss": "^4.2.1",
     "tslib": "^2.8.1",
     "typescript": "^5.9.3",
     "vite": "^7.3.1"
