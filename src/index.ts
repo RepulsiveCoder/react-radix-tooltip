@@ -1,5 +1,3 @@
-import ReactRadixTooltip, { RadixTooltipProps} from "./components/ReactRadixTooltip";
+import './index.css';
 
-export default ReactRadixTooltip;
-
-export type { RadixTooltipProps };
+export * from "./components/ReactRadixTooltip";

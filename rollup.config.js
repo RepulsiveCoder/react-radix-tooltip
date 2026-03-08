@@ -31,6 +31,12 @@ export default [
             postcss({
                 inject: true,
                 extract: false,
+                minimize: true,
+                plugins: [
+                    require('tailwindcss')('./tailwind.config.js'),
+                    require('autoprefixer')
+                ],
+                extensions: ['.css']
             }),
             terser(),
         ],

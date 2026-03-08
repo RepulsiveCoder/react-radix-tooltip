@@ -1,6 +1,6 @@
 {
   "name": "react-radix-tooltip",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A streamlined, developer-friendly wrapper for [@radix-ui/react-tooltip](https://www.radix-ui.com). This component simplifies the Radix Tooltip implementation by allowing you to trigger tooltips using a single component and a simplified prop interface.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
