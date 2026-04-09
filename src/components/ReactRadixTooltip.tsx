@@ -3,10 +3,9 @@ import { isMobile } from 'react-device-detect';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import * as Popover from '@radix-ui/react-popover';
 
-export type RadixTooltipProps = {
-    title: React.ReactNode;
+type BaseTooltipProps = {
     children: React.ReactElement<any>;
-    container?: HTMLDivElement | null | undefined,
+    container?: HTMLDivElement | null | undefined;
     placement?: 'top' | 'bottom' | 'left' | 'right';
     sideOffset?: number;
     arrow?: boolean;
@@ -23,9 +22,15 @@ export type RadixTooltipProps = {
     popoverForMobile?: boolean;
     enableForTouch?: boolean;
     popoverForTouch?: boolean;
-}
+};
+
+export type RadixTooltipProps = BaseTooltipProps & (
+    | { content: React.ReactNode; title?: React.ReactNode }
+    | { content?: React.ReactNode; title: React.ReactNode; }
+);
 
 export function RadixTooltip({
+    content = <></>,
     title = <></>,
     children,
     container,
@@ -94,7 +99,7 @@ export function RadixTooltip({
                 </Popover.Trigger>
                 <Popover.Portal>
                     <Popover.Content className={tooltipClassName} side={placement} sideOffset={sideOffset} {...props}>
-                        <div style={style}>{title}</div>
+                        <div style={style}>{content ?? title}</div>
                         {arrow && <Popover.Arrow className={tooltipArrowClassName} width={arrowWidth} height={arrowHeight} />}
                     </Popover.Content>
                 </Popover.Portal>
@@ -131,7 +136,7 @@ export function RadixTooltip({
                         sideOffset={sideOffset}
                         {...props}
                     >
-                        <div style={style}>{title}</div>
+                        <div style={style}>{content ?? title}</div>
                         {arrow && <Tooltip.Arrow className={tooltipArrowClassName} width={arrowWidth} height={arrowHeight} />}
                     </Tooltip.Content>
                 </Tooltip.Portal>
