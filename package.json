@@ -1,6 +1,6 @@
 {
   "name": "react-radix-tooltip",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A developer-friendly wrapper for [@radix-ui/react-tooltip](https://www.radix-ui.com) that simplifies implementation into a single component with a streamlined prop interface. It also includes a feature to automatically switch from a tooltip to a popover on mobile or touch devices.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

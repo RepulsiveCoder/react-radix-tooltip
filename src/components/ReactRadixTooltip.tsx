@@ -30,8 +30,8 @@ export type RadixTooltipProps = BaseTooltipProps & (
 );
 
 export function RadixTooltip({
-    content = <></>,
-    title = <></>,
+    content = null,
+    title = null,
     children,
     container,
     placement = "top",
