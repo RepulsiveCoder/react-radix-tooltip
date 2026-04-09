@@ -21,11 +21,11 @@ npm install react-radix-tooltip
 ## Usage
 
 ```tsx
-import { RadixTooltip } from 'react-radix-tooltip';
+import RadixTooltip from 'react-radix-tooltip';
 
 const MyComponent = () => (
   <RadixTooltip
-    title={
+    content={
       <div>
         <strong>Hello World</strong>
         <p>This is a custom tooltip content.</p>
@@ -50,7 +50,8 @@ More Details on [Radix-UI Documentation](https://www.radix-ui.com/primitives/doc
 
 | Prop | Type | Default | Description |
 |-----|------|---------|-------------|
-| `title` | `React.ReactNode` | **Required** | Content displayed inside the tooltip. |
+| `content` | `React.ReactNode` | **Required if title is not Provided** | Content displayed inside the tooltip. |
+| `title` | `React.ReactNode` | **Required if Content is not Provided** | Content displayed inside the tooltip. |
 | `children` | `React.ReactElement` | **Required** | The element that triggers the tooltip when hovered, focused, or interacted with. |
 | `container` | `HTMLDivElement \| null \| undefined` | `document.body` | Optional container where the tooltip portal will be rendered. |
 | `placement` | `'top' \| 'bottom' \| 'left' \| 'right'` | `'top'` | Position of the tooltip relative to the trigger element. |
