@@ -44,7 +44,7 @@ export function RadixTooltip({
     defaultOpen = false,
     onOpenChange = undefined,
     style = {},
-    tooltipClassName = "bg-gray-800 text-white px-2 py-2 rounded shadow-md text-sm z-100",
+    tooltipClassName = "bg-gray-800 text-white px-2 py-2 rounded shadow-md text-sm z-500",
     tooltipArrowClassName = "fill-gray-800",
     enableForMobile = false,
     popoverForMobile = true,
